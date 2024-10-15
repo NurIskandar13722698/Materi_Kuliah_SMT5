@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan8</title>
+</head>
+<body>
+    <h1>Form Data Mahasiswa</h1>
+    <form method="get">
+    <table border="1">
+    <tr>
+        <td><label for="nama">Nama Lengkap</label></td>
+        <td><input type="text" name="nama" id="nama" placeholder="Isi Nama Lengkap" size="42" minlength="2" maxlength="12" required></td>
+    </tr>
+    <tr>
+        <td><label for="email">Email</label></td>
+        <td><input type="email" id="email" name="email" placeholder="mahasiswa@gmail.com" size="42" value="mahasiswa@gmail.com" disabled></td>
+    </tr>
+    <tr>
+        <td><label for="tgl">Tempat, Tanggal Lahir</label></td>
+        <td><input type="text">
+            <input type="date" name="tgl" id="tgl" size=""></td>
+    </tr>
+    <tr>
+        <td><label for="jk">Jenis Kelamin</label></td>
+        <td><input type="radio" name="jkel" id="jk" value="Pria">Pria
+        <input type="radio" name="jkel" id="jk" value="Wanita">Wanita</td>   
+    </tr>
+    <tr>
+        <td><label for="hoby">Hobby</label></td>
+        <td><input type="checkbox" name="Hobby" value="ngoding">Ngoding
+            <input type="checkbox" name="Hobby2" value="swimming" id="">Swimming
+            <input type="checkbox" name="Hobby3" value="sleeping" id="">Sleeping
+            <input type="checkbox" name="Hobby4" value="gaming" id="">Gaming</td>
+    </tr>
+    <tr>
+        <td><label for="foto">Upload Foto</label></td>
+        <td><input type="file" name="" id="Foto" accept=".jpg, .png, .jpeg" multiple></td>
+    </tr>
+    <tr>
+        <td><label for="tlp">Nomor Tlp / HP</label></td>
+        <td><input type="tel" name="tlp" id="tlp" size="42" pattern="[0-9]"></td>
+    </tr>
+    <tr>
+        <td><button type="submit">Submit</button></td>
+        <td><button type="reset">Reset</button></td>
+    </tr>
+    </table>
+    </form>
+    <video src="https://youtu.be/kOanBE5Wg24?si=ADobVWEpLxRJwhQq"></video>
+    <audio src=""></audio>
+</body>
+</html>
