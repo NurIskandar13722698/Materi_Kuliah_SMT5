@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craqueline Patisserie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Style untuk latar belakang gambar */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('src/img/bghome.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style untuk navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px; /* Padding pada navbar */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar .menu-icon {
+            display: none;
+            color: white;
+            font-size: 26px;
+            cursor: pointer;
+        }
+        
+        /* Style untuk sidebar mobile */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Ubah dari right ke left */
+            width: 250px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            transition: left 0.3s ease; /* Ubah dari right ke left */
+            padding-top: 60px;
+            z-index: 9;
+        }
+
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #sidebar ul li {
+            margin: 20px;
+        }
+
+        #sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            display: flex; /* Menambahkan flex untuk menyelaraskan */
+            align-items: center; /* Menyelaraskan item ke tengah vertikal */
+        }
+
+        /* Style untuk main content */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-top: 80px;
+            text-align: center;
+            color: #333;
+        }
+
+        main h1 {
+            font-size: 36px;
+            font-family: 'Caveat', cursive; /* Font ala toko kue Prancis */
+            color: white;
+        }
+        .container{
+            margin-top: 200px;
+            height: 100%; /* Pastikan body mengisi 100% tinggi layar */
+        }
+
+        /* Style untuk card menu */
+        /* .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        } */
+
+        /* .card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        } */
+
+        /* Responsive style */
+        @media (max-width: 768px) {
+            .navbar {
+                justify-content: space-between; /* Ubah menjadi space-between */
+            }
+            .navbar ul {
+                display: none; /* Sembunyikan menu di navbar */
+            }
+            .navbar .menu-icon {
+                display: block; /* Tampilkan ikon menu */
+            }
+            .card-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-container {
+                grid-template-columns: 1fr; /* Tampilkan satu kolom di mobile */
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="src/css/kartu.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/welcome.css">
+    <link rel="stylesheet" href="src/css/as.css">
+</head>
+<body>
+<!--//bagian 1///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li><a href="index.html" id="homeLink">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html" id="menuLink">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sidebar untuk Mobile -->
+    <div id="sidebar">
+        <ul>
+            <li>
+                <a onclick="toggleSidebar()" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                    <path fill="white" d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+                
+                    Close
+                </a>
+            </li>
+            <li><a href="index.html" id="sidebarHomeLink">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html" id="sidebarMenuLink">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content  -->
+    <main>
+        <div class="container">
+            <h1 id="headerContent">Craqueline Patisserie<br>cake and pastry shop</h1>
+        
+        </div>
+
+ <!--// bagian 2///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  
+         <!-- Welcome Section bagian 2 -->
+         <section class="welcome-section">
+            <div class="welcome-content">
+                <p class="welcome-text">welcome</p>
+                <h1 class="patisserie-name">CRAQUELINE<br>PATISSERIE</h1>
+                <p class="tagline">cake and pastry shop</p>
+            </div>
+            <div class="image-container">
+                <img src="src/img/kacedasboard.png" alt="Pastry Image">
+            </div>
+        </section>
+ <!--// bagian3 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  
+        <!-- card -->
+        <div class="caktu">
+            <h2 class="section-title">Our Goodies</h2>
+            <section class="card-container">
+                
+                <div class="card">
+                    <img src="src/img/prodak/cake.png" alt="Kue & Cupcake" class="card-img">
+                    <h3>Kue & Cupcake</h3>
+                    <p>Pilih dari koleksi kue rumahan kami yang <br> luar biasa</p>
+                </div>
+                
+                <div class="card">
+                    <img src="src/img/prodak/brownis.png" alt="Brownies & Bar" class="card-img">
+                    <h3>Brownies & Bar</h3>
+                    <p>Dibuat dengan banyak cinta dan ekstra <br> cokelat fudge</p>
+                </div>
+                
+                <div class="card">
+                    <img src="src/img/prodak/cokis.png" alt="Semua Kue Kering" class="card-img">
+                    <h3>Kue Kering</h3>
+                    <p>Kenyal, berisi, mewah, dan selalu dipanggang segar.</p>
+                </div>
+                
+            </section>
+        </div>
+ <!--// bagian4 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+ 
+        <div class="review">
+            <h2>Why Choose Your Craqueline Patisserie</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <!-- SVG untuk Digital Approval -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M19 1H9C7.9 1 7 1.9 7 3V21C7 22.1 7.9 23 9 23H19C20.1 23 21 22.1 21 21V3C21 1.9 20.1 1 19 1ZM19 21H9V3H19V21Z" />
+                        <path d="M5 5H3V21C3 22.1 3.9 23 5 23H17V21H5V5Z" />
+                    </svg>
+                    <div class="feature-title">Digital Approval</div>
+                    <p class="feature-description">Easily approve your custom cake designs online with our interactive digital platform.</p>
+                </div>
+                <div class="feature-item">
+                    <!-- SVG untuk Safety Certified -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2L13.09 8.26L19.17 8.74L14.13 12.14L15.36 18.22L12 15.27L8.64 18.22L9.87 12.14L4.83 8.74L10.91 8.26L12 2Z" />
+                    </svg>
+                    <div class="feature-title">Safety Certified</div>
+                    <p class="feature-description">Enjoy peace of mind knowing your cake is crafted by fully certified food handling professionals.</p>
+                </div>
+                <div class="feature-item">
+                    <!-- SVG untuk Vision to Reality -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="9" cy="10" r="1" fill="#ffffff"/>
+                        <circle cx="15" cy="10" r="1" fill="#ffffff"/>
+                        <path d="M12 15C13.1 15 14 14.1 14 13H10C10 14.1 10.9 15 12 15Z" fill="#ffffff"/>
+                    </svg>
+                    <div class="feature-title">Vision to Reality</div>
+                    <p class="feature-description">We transform your cake ideas from initial sketches into delicious, artistic realities.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 Your Happy Baker. All Rights Reserved.
+    </footer>
+ <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <!-- <script>
+       function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px'; // Tutup sidebar
+            } else {
+                sidebar.style.left = '0'; // Tampilkan sidebar
+            }
+        }
+          
+    </script> -->
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px'; // Tutup sidebar
+            } else {
+                sidebar.style.left = '0'; // Tampilkan sidebar
+            }
+        }
+    
+        // Deteksi swipe untuk menutup sidebar di perangkat mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+    
+        function handleGesture() {
+            const sidebar = document.getElementById('sidebar');
+            if (touchStartX - touchEndX > 50) {
+                sidebar.style.left = '-250px'; // Tutup sidebar
+            }
+        }
+    
+        sidebar.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+    
+        sidebar.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleGesture();
+        });
+    
+        // Event listener untuk menutup sidebar saat layar diubah ukurannya
+        window.addEventListener('resize', () => {
+            const sidebar = document.getElementById('sidebar');
+            if (window.innerWidth > 768) { // Ukuran layar yang dianggap sebagai desktop
+                sidebar.style.left = '-250px'; // Tutup sidebar jika layar lebih besar
+            }
+        });
+    </script>
+ 
+  
+</body>
+</html>

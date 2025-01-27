@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+/* Style untuk form */
+form {
+    max-width: 50%;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.048);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    color: rgb(53, 53, 53);
+    background-color: white;
+}
+
+form h1 {
+    color: #424242;
+}
+
+/* Input dan Textarea */
+.feedback-input {
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: #f9f9f9;
+    border: 2px solid #3b3b3bf1;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.feedback-input:focus {
+    border: 2px solid #424040;
+    background-color: #fff;
+}
+
+/* Textarea Styling */
+textarea {
+    height: 150px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+/* Tombol Submit */
+[type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: #5c5c5c;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 10px 0;
+    transition: all 0.3s;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+[type="submit"]:hover {
+    background: #686868;
+}
+
+/* Responsivitas */
+@media (max-width: 780px) {
+    form {
+        max-width: 90%;
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        max-width: 90%;
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .feedback-input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    [type="submit"] {
+        font-size: 20px;
+    }
+}
+
+
+
+.contact-list {
+    list-style-type: none; /* Menghilangkan bullet points pada list */
+    display: flex; /* Menampilkan elemen secara horizontal */
+    padding: 0; /* Menghilangkan padding default */
+    margin: 0; /* Menghilangkan margin default */
+    justify-content: center; /* Memusatkan seluruh daftar secara horizontal */
+}
+
+.contact-list li {
+    max-width: 150px; /* Atur lebar maksimum untuk setiap item */
+    overflow: hidden; /* Menghilangkan teks yang melebihi lebar */
+    text-overflow: ellipsis; /* Menambahkan tanda "..." pada akhir teks yang terpotong */
+    display: flex; /* Mengatur elemen di dalam li agar inline */
+    flex-direction: column; /* Mengatur gambar di atas teks */
+    align-items: center; /* Menyelaraskan item di tengah secara horizontal */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    margin-right: 20px; /* Memberi jarak antar item */
+    white-space: normal; /* Memungkinkan teks untuk membungkus ke baris berikutnya */
+}
+
+.contact-list img {
+    max-width: 50%; /* Membuat gambar mengecil otomatis sesuai kontainer */
+    height: auto; /* Menjaga proporsi gambar */
+    margin-bottom: 5px; /* Memberi jarak antara gambar dan teks */
+}
